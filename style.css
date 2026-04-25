@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    font-family: Segoe UI;
+    background: #f4f6fa;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #fff;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    background: #5b3fe0;
+    color: white;
+    margin: 30px;
+    padding: 50px;
+    border-radius: 20px;
+    animation: fadeIn 1s;
+}
+
+.hero-right {
+    background: white;
+    color: black;
+    padding: 40px;
+    border-radius: 15px;
+    width: 350px;
+    animation: zoom 0.8s;
+}
+
+.hero-right input,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+.btn {
+    background: #ff9f1a;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.auth-box {
+    background: white;
+    max-width: 350px;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 15px;
+    animation: zoom 0.8s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0.8)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}

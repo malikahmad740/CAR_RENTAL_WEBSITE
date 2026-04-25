@@ -1,0 +1,61 @@
+<?php include "db.php"; ?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Car Rental</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Car Rental Logo">
+            <span>CarRental</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="#vehicles">Vehicles</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+            <?php if(isset($_SESSION['email'])): ?>
+            <li class="auth-btn"><a href="logout.php">Logout</a></li>
+            <?php else: ?>
+            <li class="auth-btn"><a href="login.php">Login</a></li>
+            <?php endif; ?>
+        </ul>
+    </nav>
+
+
+    <section class="hero">
+        <div class="hero-left">
+            <h1>Experience the road<br>like never before</h1>
+            <p>Premium cars and flexible rental plans.</p>
+            <button class="btn">View all cars</button>
+        </div>
+
+        <div class="hero-right">
+            <h3>Book your car</h3>
+            <form action="book_car.php" method="POST">
+                <select name="car">
+                    <option>Mercedes</option>
+                    <option>Porsche</option>
+                    <option>Toyota</option>
+                </select>
+                <input type="text" name="rent_place" placeholder="Place of rental">
+                <input type="text" name="return_place" placeholder="Place of return">
+                <input type="date" name="rent_date">
+                <input type="date" name="return_date">
+                <button class="btn full">Book now</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
